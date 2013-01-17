@@ -6,8 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Animal.destroy_all
 
 seed = YAML.load(File.open("#{Rails.root}/config/animals.yml"))
 seed['animals'].each {
-  |animal| Animal.create animal
+  |animal| Animal.create animal.merge({:picture => open("#{Rails.root}/public/images.jpeg")})
 }

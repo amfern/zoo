@@ -7,3 +7,33 @@ animals:
   - name: elephant
     category: mammals
     count: 5
+  - name: cat
+    category: mammals
+    count: 3
+  - name: dog
+    category: mammals
+    count: 1
+  - name: kangaroo
+    category: mammals
+    count: 15
+  - name: duck
+    category: birds
+    count: 2
+  - name: pigeon
+    category: birds
+    count: 7
+  - name: flamingo
+    category: birds
+    count: 8
+  - name: vulture
+    category: birds
+    count: 4
+  - name: owl
+    category: birds
+    count: 5
+  - name: shark
+    category: fish
+    count: 7
+  - name: catfish
+    category: fish
+    count: 25
