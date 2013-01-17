@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   # GET /animals
   # GET /animals.json
   def index
-    @animals = Animal.paginate(:page => params[:page])
+    @animals = Animal.where(:category => params[:category]).paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
