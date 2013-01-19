@@ -2,6 +2,7 @@ class AnimalsController < ApplicationController
   # GET /animals
   # GET /animals.json
   def index
+    params[:category] = params[:category] == 'all' ? nil : params[:category]
     @animals = Animal.where(params[:category] ? {:category => params[:category]} : {}).paginate(:page => params[:page])
 
     respond_to do |format|

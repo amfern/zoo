@@ -1,0 +1,79 @@
+<!-- <h1>Listing animals</h1>
+
+<table id='animals'>
+  <tr>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Count</th>
+    <th>Picture</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%= animal.category %></td>
+    <td><%= animal.name %></td>
+    <td><%= animal.count %></td>
+    <td><%= animal.picture %></td>
+    <td><%= link_to 'Show', animal %></td>
+    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Destroy', animal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Animal', new_animal_path %> -->
+<div id='main'></div>
+
+
+<script type="text/template" id="animals">
+	
+</script>
+
+<script type="text/template" id="animal">
+  <td>[%= name %]</td>
+  <td>[%= count %]</td>
+</script>
+
+<script id="animals_layout" type="text/template">
+  <navigation id="tabs"></navigation>
+  <div class="wrapper">
+    <div class="scroller">
+      <article id="content"></article>
+      <a href="#" id="moreButton">more...</a>
+    </div>
+  </div>
+</script>
+
+<script id="tab_button" type="text/template">
+  <a id='tabButton[%= category %]' href='[%= url %]'>[%= category %] </a>
+</script>
+
+<script id="tab_buttons" type="text/template">
+
+</script>
+
+<script id="animal_modal" type="text/template">
+  <span class="content">
+    <div><label>category:</label><span> [%= category %]</span></div>
+    <div><label>name:</label><span> [%= name %]</span></div>
+    <div><label>count:</label><span> [%= count %]</span></div>
+  </span>
+  <footer>
+    <a class="delete" href="#close">Remove all vultures</a>
+  </footer>
+  <img src="[%= picture.url %]" />  
+</script>
+
+<div id="openModal" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <article id='modal'>
+      
+    </article>
+  </div>
+</div>

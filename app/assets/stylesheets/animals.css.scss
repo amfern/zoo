@@ -1,3 +1,142 @@
 // Place all the styles related to the Animals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$border: 2px solid #000;
+
+.scroller td, .scroller {
+  font-size: 32px;
+  line-height: 32px;  
+}
+
+.scroller {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 148px;
+  border: $border;
+  
+  td {
+    width: 150px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+}
+
+#tabs {
+  ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+  }
+  
+  li{
+    display: inline;
+    list-style-type: none;
+    font-size: 20px;
+    
+    a {
+      text-transform: capitalize;
+      outline: none;
+      padding: 0 10px;
+      text-decoration: none;
+      border: $border;
+    
+      -moz-border-radius-topright: 25px 50px;
+      border-top-right-radius: 25px 50px;
+      
+      -moz-border-radius-topleft: 25px 50px;
+      border-top-left-radius: 25px 50px;
+    }
+    
+    .active {
+      background-color: #999;
+    }
+  } 
+}
+
+.wrapper {
+  border: $border;
+  padding: 15px;
+}
+
+#main section{
+  margin-left: auto ;
+  margin-right: auto ;
+  width: 400px;
+}
+
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  text-align: right;
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+  width: 500px;
+  
+  .content {
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+  }
+  
+  img {
+    max-width: 300px;
+    max-height: 300px
+  }
+  
+  footer {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+  }
+  
+  .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+  
+  .close:hover { background: #00d9ff; }
+}
